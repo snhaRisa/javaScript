@@ -8,7 +8,7 @@ let count;
 for(count = str.length-1; count>=0; count--)
 {
     console.log(str.charAt(count));
-}
+} 
 
 console.log(`---------------------------------`);
 
@@ -16,3 +16,4 @@ for(count = num.length-1; count>=0; count--)
 {
     console.log(num[count]);
 }
+
