@@ -11,6 +11,7 @@ function findUnique(numbers)
     for(count; count<numbers.length; count++)
     {
         if(results.includes(numbers[count]) == false) //taking it as true would have been an issue. As we would have a possibility of missing a number occurring only once. 
+        //if(!results.includes(numbers[count]))
         {
             results.push(numbers[count]);
         }      
