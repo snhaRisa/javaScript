@@ -1,4 +1,5 @@
 //create a function which checks whether a function ends with a particular suffix or not. It takes two arguments. 
+//Could be more efficient.
 
 const inputString = "Rishav";
 const suffix = '}';
