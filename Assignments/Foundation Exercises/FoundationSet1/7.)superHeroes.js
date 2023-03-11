@@ -30,9 +30,9 @@ function thePower(input, checkVar)
     
     for(let count=0; count<input.length; count++)
     {
-        if(input[count].name == checkVar)
+        if(input[count].name === checkVar)
         {
-            resultString = `${resultString + input[count].powers}`; 
+            resultString = input[count].powers.join(', ');
         }
     }
 
