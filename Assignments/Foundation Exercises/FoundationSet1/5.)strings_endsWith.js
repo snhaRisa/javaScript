@@ -2,30 +2,48 @@
 //Could be more efficient.
 
 const inputString = "Rishav";
-const suffix = '}';
+const suffix = 'hav';
 
-function endsWith(input, suf)
+function endsWith(inputStr, inputsuff)
 {
-   const sufLen = suffix.length; 
-   let count = 0, counter=0, sufCount=0; 
+    const arr = inputStr.split('');
+    
+    const lastIndex = (arr.length-1);
 
-   for(count = input.length-sufLen; count<input.length; count++)
-   {
-        if(input[count]==suf[sufCount])
-        {
-            counter++;
-        }
-		sufCount++;
-   }
-
-   if(counter==sufLen)
-   {
+    if(lastIndex == inputsuff)
+    {
         return true; 
-   }
-   else
-   {
-		return false; 
-   }
+    }
+    else
+    {
+        return false; 
+    }
+    
 }
+
+
+// function endsWith(input, suf)
+// {
+//    const sufLen = suffix.length; 
+//    let count = 0, counter=0, sufCount=0; 
+
+//    for(count = input.length-sufLen; count<input.length; count++)
+//    {
+//         if(input[count]==suf[sufCount])
+//         {
+//             counter++;
+//         }
+// 		sufCount++;
+//    }
+
+//    if(counter==sufLen)
+//    {
+//         return true; 
+//    }
+//    else
+//    {
+// 		return false; 
+//    }
+// }
 
 console.log(endsWith(inputString, suffix));
