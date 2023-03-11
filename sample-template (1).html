@@ -20,7 +20,67 @@
            const rootHandle = document.getElementById('root')
            
            // Your code goes here 
-           
+           function App(props)
+           {
+                const tasks = [
+                    {title: 'Deploy the app', status: false},
+                    {title: 'Test Functions', status: false}, 
+                    {title: 'Fix the bugs', status:true}
+                ]
+
+                let count=0, completedTasks=0, incompleteTasks=0;
+                
+                for(count=0; count<tasks.length; count++)
+                {
+                    if(tasks[count].status == false)
+                    {
+                        incompleteTasks++;
+                    }
+                    else
+                    {
+                        completedTasks++;
+                    }
+                }
+
+                //loop for tasks
+                const listCompleteTasks = [], listIncompleteTasks=[];
+                for(count=0; count<tasks.length; count++)
+                {
+                    if(tasks[count].status == false)
+                    {
+                        listIncompleteTasks.push(<li key={count}> {tasks[count].title} </li>)
+                    }
+                    else
+                    {
+                        listCompleteTasks.push(<li key={count}> <s> {tasks[count].title} </s> </li>)
+                    }
+                }
+
+                let completePercentage = 0;
+                completePercentage = Math.round((completedTasks/tasks.length) * 100);
+                
+                return (
+                    <div>
+                        <h1> TaskBox </h1>
+                        <h2> List of Tasks : {tasks.length} </h2>
+
+                        <progress max='100' value={completePercentage}> {completePercentage} </progress>
+
+                        <h3> Completed Tasks: {completedTasks}</h3>
+                        <ul>
+                            {listCompleteTasks}
+                        </ul>
+
+                        <h3> Incomplete Tasks: {incompleteTasks} </h3>
+                        <ul>
+                            {listIncompleteTasks}
+                        </ul>
+                    </div>
+                )
+           }
+
+           ReactDOM.render(<App />, rootHandle)
+
         </script>
     </body>
 </html>
