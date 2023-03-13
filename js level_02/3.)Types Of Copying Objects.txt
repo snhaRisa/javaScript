@@ -1,0 +1,25 @@
+There are two types of copying. 
+1.)Shallow copying
+2.)Deep copying
+
+Shallow copying;
+1.)It means that certain values or sub values are still connected to original values. 
+2.)We use it when we need multiple variables pointing to a particular object or variable. 
+
+Deep copying; 
+1.)All the values are copied into the new variable and it is disconnected to the original variable. 
+2.)We use it when we need to make a copy of our object. Then we have two copies and they both are separated. We can do different actions onto the objects and still have two different object. 
+
+  Implementing Deep copy
+    >There are different methods to deep copy an object. Array & Objects have different methods for deep copy. 
+        
+        Array
+        #Array Slice Method
+        #Array Concat Method
+        #Spread Operator ES6
+        #JSON.stringify() + JSON.parse() //This is used for very complex arrays.    
+
+        Object
+        #Object.assign() methods
+        #Spread Operator (...)
+        #JSON.stringify() + JSON.parse() //for complex objects
